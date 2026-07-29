@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Chart as ReactChart } from 'react-chartjs-2'
-import { BarElement, CategoryScale, Chart as ChartJS, Filler, Legend, LineElement, LinearScale, PointElement, Title, Tooltip } from 'chart.js'
+import Chart from 'chart.js/auto'
 import { supabase } from '../lib/supabase'
 import Card from '../components/Card'
 import './Dashboard.css'
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, Title, Tooltip, Legend, Filler)
+void Chart
 
 type ResumoMensal = { mes: string; total_entradas: number | string | null; total_despesas: number | string | null }
 type Investimento = { data: string; valor_investido: number | string | null; rendimento_percent: number | string | null; objetivo_id: string | null }
